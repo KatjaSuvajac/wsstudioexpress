@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77C93C4B-2442-4BAC-BA44-6FFFD739A690}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>VS2005Style</AssemblyName>
+    <MyType>Windows</MyType>
+    <OptionCompare>Text</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WindowsApplication1\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\PopupButton.designer.vb">
+      <DependentUpon>PopupButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopupButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extender\Extender.vb" />
+    <Compile Include="Extender\FromBase\AutoHideStripFromBase.vb">
+    </Compile>
+    <Compile Include="Extender\FromBase\AutoHideTabFromBase.vb" />
+    <Compile Include="Extender\FromBase\DockPaneCaptionFromBase.vb">
+    </Compile>
+    <Compile Include="Extender\FromBase\DockPaneStripFromBase.vb">
+    </Compile>
+    <Compile Include="Extender\FromBase\DockPaneTabFromBase.vb" />
+    <Compile Include="Extender\FromBase\Helpers\DockHelper.vb" />
+    <Compile Include="Extender\FromBase\Helpers\DrawHelper.vb" />
+    <Compile Include="Extender\FromBase\Helpers\ResourceHelper.vb" />
+    <Compile Include="Extender\FromBase\Win32\Enums.vb" />
+    <Compile Include="Extender\FromBase\Win32\Gdi32.vb" />
+    <Compile Include="Extender\FromBase\Win32\Structs.vb" />
+    <Compile Include="Extender\FromBase\Win32\User32.vb" />
+    <Compile Include="Extender\Override\AutoHideStripOverride.vb">
+    </Compile>
+    <Compile Include="Extender\Override\DockPaneStripOverride.vb">
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\PopupButton.resx">
+      <DependentUpon>PopupButton.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DockPaneCaption.AutoHideNo.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneCaption.AutoHideYes.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneCaption.CloseDisabled.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneCaption.CloseEnabled.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneCaption.OptionsDisabled.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneCaption.OptionsEnabled.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneStrip.CloseDisabled.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneStrip.CloseEnabled.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneStrip.OptionsDisabled.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneStrip.OptionsEnabled.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneStrip.OverflowDisabled.bmp" />
+    <EmbeddedResource Include="Resources\DockPaneStrip.OverflowEnabled.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
