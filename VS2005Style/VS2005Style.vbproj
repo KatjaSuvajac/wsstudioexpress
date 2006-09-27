@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WindowsApplication1\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+      <HintPath>..\CustomControls\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -62,11 +62,14 @@
     </Compile>
     <Compile Include="Extender\Extender.vb" />
     <Compile Include="Extender\FromBase\AutoHideStripFromBase.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Extender\FromBase\AutoHideTabFromBase.vb" />
     <Compile Include="Extender\FromBase\DockPaneCaptionFromBase.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Extender\FromBase\DockPaneStripFromBase.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Extender\FromBase\DockPaneTabFromBase.vb" />
     <Compile Include="Extender\FromBase\Helpers\DockHelper.vb" />
@@ -77,8 +80,10 @@
     <Compile Include="Extender\FromBase\Win32\Structs.vb" />
     <Compile Include="Extender\FromBase\Win32\User32.vb" />
     <Compile Include="Extender\Override\AutoHideStripOverride.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Extender\Override\DockPaneStripOverride.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

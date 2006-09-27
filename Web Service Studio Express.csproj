@@ -30,10 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="PropertyGridEx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Programmi\Microsoft Visual Studio 2005\Common7\Controls\PropertyGridEx.dll</HintPath>
-    </Reference>
+    <Reference Include="PropertyGridEx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -41,15 +38,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Programmi\Microsoft Visual Studio 2005\Common7\Controls\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
-    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\SpecialServices\SingleProgramInstance.cs">
-      <Link>SingleProgramInstance.cs</Link>
-    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +48,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="frmWebService.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmWebService.Designer.cs">
       <DependentUpon>frmWebService.cs</DependentUpon>
@@ -92,6 +84,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="RecentFiles.cs" />
+    <Compile Include="SingleProgramInstance.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="VS2005Style\VS2005Style.vbproj">
@@ -100,6 +93,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomControls\PropertyGridEx.dll" />
+    <Content Include="CustomControls\WeifenLuo.WinFormsUI.Docking.dll" />
     <Content Include="Disco.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
